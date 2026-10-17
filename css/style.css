@@ -130,3 +130,65 @@ footer {
     flex-direction: column;
   }
 }
+
+.task-list {
+  display: grid;
+  gap: 10px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #e3e8f2;
+  border-radius: 10px;
+}
+
+.task-text {
+  overflow-wrap: anywhere;
+}
+
+.task-item.completed .task-text {
+  color: #8a94a6;
+  text-decoration: line-through;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.task-actions button {
+  padding: 9px 11px;
+  font-size: 13px;
+}
+
+.complete-button {
+  background: #198754;
+}
+
+.complete-button:hover {
+  background: #146c43;
+}
+
+.delete-button {
+  background: #d93b45;
+}
+
+.delete-button:hover {
+  background: #b52d37;
+}
+
+@media (max-width: 480px) {
+  .task-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .task-actions {
+    flex-wrap: wrap;
+  }
+}
