@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Daily Study Tracker</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="intro">
+      <p class="eyebrow">YOUR DAILY FOCUS</p>
+      <h1>Daily Study Tracker</h1>
+      <p class="subtitle">
+        Small steps every day add up.
+        Plan your study tasks and keep moving.
+      </p>
+    </header>
+
+    <form id="task-form">
+      <label for="task-input">What do you need to study?</label>
+
+      <div class="input-row">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="e.g. Revise Git commands"
+          maxlength="100"
+          required
+        >
+        <button type="submit">Add task</button>
+      </div>
+    </form>
+
+    <section class="tasks" aria-labelledby="tasks-heading">
+      <div class="tasks-heading">
+        <h2 id="tasks-heading">Today's tasks</h2>
+        <span id="task-count">0 tasks</span>
+      </div>
+
+      <p id="empty-state" class="empty-state">
+        No tasks yet. Add your first task above.
+      </p>
+
+      <ul id="task-list" class="task-list"></ul>
+    </section>
+
+    <footer>
+      <p>Built while learning Git &amp; GitHub.</p>
+    </footer>
+  </main>
+</body>
+</html>
